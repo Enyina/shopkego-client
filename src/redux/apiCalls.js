@@ -7,13 +7,16 @@ import {
   registerFailure,
 } from "./userRedux";
 import { publicRequest } from "../requestMethods";
-import axios from "axios";
+// import axios from "axios";
 
 export const login = async (dispatch, user) => {
+  console.log(user);
   dispatch(loginStart());
+
   try {
-    const res = await publicRequest.post("/auth/login", user);
-    // console.log(res.data);
+    const res = await publicRequest.post("/users/login", user);
+    console.log(res);
+    console.log(res.data);
     dispatch(loginSuccess(res.data));
   } catch (err) {
     dispatch(loginFailure());
@@ -22,7 +25,7 @@ export const login = async (dispatch, user) => {
 export const register = async (dispatch, user) => {
   dispatch(registerStart());
   try {
-    const res = await publicRequest.post("/auth/signup", user);
+    const res = await publicRequest.post("/users/signup", user);
     dispatch(registerSuccess(res.data));
     console.log(res.data);
   } catch (err) {

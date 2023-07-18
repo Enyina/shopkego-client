@@ -94,9 +94,8 @@ const Footer = () => {
       <Left>
         <Logo>Kego.</Logo>
         <Desc>
-          lots and lots of random text to make this look real for you viewing
-          this so be very grateful when you see it cuz it took a while to write
-          up
+          We are the best in the world of Fashion and we also offer cheap
+          products, giving you the best of both worlds
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
